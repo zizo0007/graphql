@@ -1,0 +1,203 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    min-height: 100vh;
+}
+
+.titrePage {
+    text-align: left;
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    color: #2c3e50;
+    font-weight: bold;
+    flex: 1;
+}
+
+.titrePage span {
+    color: #3498db;
+}
+
+.exit {
+    position: static;
+    margin-left: 1em;
+    z-index: 10;
+}
+
+.exit button {
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.exit button:hover {
+    background-color: #c0392b;
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container1, .graphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section, #personalnfo, #xpProgression, #talentSkills, #auditRatio {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 0;
+    width: 100%;
+    min-width: 260px;
+    /*flex: 1 1 320px;*/
+}
+
+.infoHeader {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.infoUser {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.transactionInfo {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+svg {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#talentSkills svg, #auditRatio svg {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 500px;
+    min-width: 180px;
+    display: block;
+    margin: 0 auto;
+    transition: width 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0 2rem;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+.transactions-list {
+    margin-top: 1rem;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.graphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.graphs .section {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .container1, .graphs {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .main-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        padding: 5px;
+    }
+    .section, #personalnfo, #xpProgression, #talentSkills, #auditRatio {
+        padding: 0.7rem;
+        min-width: 0;
+    }
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem;
+    }
+    .exit {
+        align-self: flex-end;
+        margin: 0.5em 0 0 0;
+    }
+    .titrePage {
+        font-size: 1.2rem;
+        padding: 0.3rem 0;
+        text-align: left;
+    }
+    #talentSkills svg, #auditRatio svg {
+        min-height: 120px;
+    }
+}
