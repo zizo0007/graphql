@@ -249,7 +249,8 @@ function createRadarChart(data) {
     container.innerHTML = "";
 
     const yourSkills = document.createElement("h3");
-    yourSkills.textContent = "Your skills :";
+    yourSkills.className = "infoHeader";
+    yourSkills.textContent = "Vos skills";
     container.appendChild(yourSkills);
 
     // Dimensions virtuelles pour le viewBox
@@ -329,11 +330,11 @@ function xpProgressioninfo() {
 
     // Section XP Progression (sans Total XP)
     progressionContainer.innerHTML = `
-        <h3 class="infoHeader">XP Progression</h3>
-        <div class="transactionInfo">Low Transaction: ${(minAmount/1000).toFixed(2)} KB</div>
+        <h3 class="infoHeader">Transactions</h3>
+        <div class="transactionInfo">Faible Transaction: ${(minAmount/1000).toFixed(2)} KB</div>
         <div class="transactionInfo">Transactions: ${transactions.length}</div>
-        <div class="transactionInfo">Transaction average: ${(roundedAverage/1000).toFixed(2)} KB</div>
-        <div class="transactionInfo">Big Transaction ---> ${(maxAmount/1000).toFixed(2)} KB</div>
+        <div class="transactionInfo">Moyenne des transactions: ${(roundedAverage/1000).toFixed(2)} KB</div>
+        <div class="transactionInfo">Grosse transaction: ${(maxAmount/1000).toFixed(2)} KB</div>
     `;
 }
 
